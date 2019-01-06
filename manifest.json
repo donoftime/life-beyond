@@ -1,0 +1,18 @@
+{
+    "name": "Life Beyond",
+    "version": "1.0",
+    "description": "D&D Beyond Life Domain Cleric Quality of Life Improvements",
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": ["https://www.dndbeyond.com/*"],
+            "js": ["life.js"]
+        }
+    ],
+    "icons": {
+        "16": "life.png",
+        "32": "life.png",
+        "48": "life.png",
+        "128": "life.png"
+    }
+}
