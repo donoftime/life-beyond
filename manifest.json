@@ -10,9 +10,9 @@
         }
     ],
     "icons": {
-        "16": "life.png",
-        "32": "life.png",
-        "48": "life.png",
-        "128": "life.png"
+        "16": "images/life16.png",
+        "32": "images/life32.png",
+        "48": "images/life48.png",
+        "128": "images/life128.png"
     }
 }

@@ -12,4 +12,10 @@ https://dndbeyond.zendesk.com/hc/en-us/community/posts/360023760673-Life-Domain-
 
 In the meantime, this chrome extension will hopefully fill the gap.
 
-![life.gif](./life.gif)
+![life.gif](./images/life.gif)
+
+## Usage
+
+The easiest way to install the extension is to grab it off the [Chrome Web Store](https://chrome.google.com/webstore/detail/jipdekfflmepdfmkmaofoegjkfjhjemb). If you would rather install from
+source, you can clone this repository, then follow the docs from Google on
+[loading an unpacked extension](https://developer.chrome.com/extensions/getstarted).
