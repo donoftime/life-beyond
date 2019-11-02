@@ -1,9 +1,10 @@
 const lifeBeyond = async () => {
   const character = await fetchCharacter();
-  const lifeDomain = character.classes.filter((characterClass) => characterClass.subclassDefinition.name == 'Life Domain')[0];
+  const lifeDomain = character.classes.filter((charClass) => charClass.subclassDefinition.name == 'Life Domain')[0];
   if (lifeDomain == null) {
     return;  // nothing to do here
   }
+  await new Promise(resolve => setTimeout(resolve, 3000));
   watchForSpellBookUpdates(lifeDomain);
 }
 
