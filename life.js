@@ -1,11 +1,10 @@
 const lifeBeyond = async () => {
   const character = await fetchCharacter();
-  const lifeDomain = character.classes.filter((charClass) => charClass.subclassDefinition.name == 'Life Domain')[0];
+  const lifeDomain = character.classes.filter((characterClass) => characterClass.subclassDefinition.name == 'Life Domain')[0];
   if (lifeDomain == null) {
     return;  // nothing to do here
   }
-  await new Promise(resolve => setTimeout(resolve, 3000));
-  watchForSpellBookUpdates(lifeDomain);
+  watchForSidebar(lifeDomain);
 }
 
 const fetchCharacter = async () => {
@@ -20,9 +19,19 @@ const fetchCharacter = async () => {
   }
 }
 
-const watchForSpellBookUpdates = (lifeDomain) => {
+const watchForSidebar = async (lifeDomain) => {
+  const observer = new MutationObserver(mutations => {
+    const sidebar = document.querySelector('.ct-sidebar__portal');
+    if (sidebar) {
+      watchForSpellBookUpdates(sidebar, lifeDomain);
+      observer.disconnect();
+    }
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+}
+
+const watchForSpellBookUpdates = (sidebar, lifeDomain) => {
   const observer = new MutationObserver(addBonusesToHealingSpells(lifeDomain));
-  const sidebar = document.querySelector('.ct-sidebar__portal');
   const observerConfig = { childList: true, subtree: true, characterData: true };
   observer.observe(sidebar, observerConfig);
 }
