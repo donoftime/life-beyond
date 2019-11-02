@@ -1,6 +1,6 @@
 {
     "name": "Life Beyond",
-    "version": "1.0",
+    "version": "1.0.1",
     "description": "D&D Beyond Life Domain Cleric Quality of Life Improvements",
     "manifest_version": 2,
     "content_scripts": [
