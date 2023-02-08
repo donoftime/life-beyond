@@ -1,3 +1,9 @@
+> :warning::warning::warning:
+> 
+> Changes by DND Beyond have closed the API that was used by this extension, rendering it inoperable. The project will remain here as an archive in case anyone wants to use it as reference for a new solution, though hopefully DND Beyond will fix the bugs natively to eliminate the need for a project like this.
+> 
+> :warning::warning::warning:
+
 # Life Beyond
 
 ~Improving the quality of Life Clerics~
